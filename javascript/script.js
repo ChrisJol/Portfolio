@@ -33,11 +33,6 @@ navDots.forEach( dot => {
 
 
 
-
-let skills = document.querySelector(".view__skills").offsetTop
-let contact = document.querySelector(".view__contact").offsetTop
-let projects = document.querySelector(".view__projects").offsetTop
-
 let animateDot = (selector) => {
     let selected = this.document.querySelector(".selected")
 
@@ -55,6 +50,9 @@ let animateDot = (selector) => {
 }
 
 window.addEventListener("scroll", function(){
+    let skills = document.querySelector(".view__skills").offsetTop
+    let contact = document.querySelector(".view__contact").offsetTop
+    let projects = document.querySelector(".view__projects").offsetTop
     let pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
 
     if( pageYOffset >= projects && pageYOffset < skills ){
