@@ -1,82 +1,84 @@
+let controller = new ScrollMagic.Controller()
+
+//project page tween and scroll scene
+let projectsImgTween = gsap.from('.projects__state--img', { x: 100, opacity: 0 })
+let projectScene = new ScrollMagic.Scene({
+    triggerElement: '.view__projects',
+    duration: "50%"
+})
+.setTween(projectsImgTween)
+// .addIndicators()
+
+controller.addScene([
+    projectScene
+])
+
+let navDots = document.querySelectorAll(".nav__dot")
+
+navDots.forEach( dot => {
+    dot.addEventListener("click", function(event){
+        event.preventDefault()
+        let location = `${event.target.hash}`
+
+        gsap.to(window, {
+            duration: 1.3,
+            scrollTo: location,
+            ease: "expo.out"
+        })
+
+        console.log(event.target.hash)
+    })
+})
+
+
+
+
+
 let skills = document.querySelector(".view__skills").offsetTop
 let contact = document.querySelector(".view__contact").offsetTop
 let projects = document.querySelector(".view__projects").offsetTop
-let timeout = 1000;
 
-let navDots = document.querySelectorAll(".nav__dot")
-navDots.forEach( dot => {
+let animateDot = (selector) => {
+    let selected = this.document.querySelector(".selected")
+
+    selected.classList.remove("hover-effect")
+    selected.classList.remove("selected")
+
+    let dot = document.querySelector(selector)
+
+    dot.classList.add("selected")
     dot.classList.add("hover-effect")
-    setTimeout( _ => {
+
+    setTimeout( function(){
         dot.classList.remove("hover-effect")
-    }, timeout)
-})
+    }, 1000 )
+}
 
 window.addEventListener("scroll", function(){
     let pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
-    let selected = this.document.querySelector(".selected")
 
     if( pageYOffset >= projects && pageYOffset < skills ){
-        selected.classList.remove("hover-effect")
-        selected.classList.remove("selected")
-        let projectsDot = this.document.querySelector(".projects")
-
-        projectsDot.classList.add("selected")
-        projectsDot.classList.add("hover-effect")
-
-        this.setTimeout( _ => {
-            projectsDot.classList.remove("hover-effect")
-        }, timeout)
+        animateDot(".projects")
     }
     else if(pageYOffset >= skills && pageYOffset < contact){
-        selected.classList.remove("hover-effect")
-        selected.classList.remove("selected")
-        let skillsDot = this.document.querySelector(".skills")
-
-        skillsDot.classList.add("selected")
-        skillsDot.classList.add("hover-effect")
-
-        this.setTimeout( _ => {
-            skillsDot.classList.remove("hover-effect")
-        }, timeout)
+        animateDot(".skills")
     }
     else if(pageYOffset >= contact){
-        selected.classList.remove("hover-effect")
-        selected.classList.remove("selected")
-        let contactDot = this.document.querySelector(".contact")
-
-        contactDot.classList.add("selected")
-        contactDot.classList.add("hover-effect")
-
-        this.setTimeout( _ => {
-            contactDot.classList.remove("hover-effect")
-        }, timeout)
+        animateDot(".contact")
     }
     else{
-        selected.classList.remove("hover-effect")
-        selected.classList.remove("selected")
-        let splashDot = this.document.querySelector(".splash")
-
-        splashDot.classList.add("selected")
-        splashDot.classList.add("hover-effect")
-
-        this.setTimeout( _ => {
-            splashDot.classList.remove("hover-effect")
-        }, timeout)
+        animateDot(".splash")
     }
 })
 
 
-const callback = function(entries){
-    entries.forEach(entry => {
-        setTimeout( _ => {
-            entry.target.classList.add("slide-in")
-        }, 150)
-    })
-}
 
-const observer = new IntersectionObserver(callback)
-const target = document.querySelector(".projects__state--img")
-
-observer.observe(target);
+// let navDots = document.querySelectorAll(".nav__dot")
+// navDots.forEach(dot => {
+//     dot.classList.add("hover-effect")
+//     setTimeout(_ => {
+//         dot.classList.remove("hover-effect")
+//     }, timeout)
+// })
 
 
