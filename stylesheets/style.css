@@ -28,37 +28,6 @@ a{
     text-decoration: none;;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    display: flex;
-    justify-content: flex-end;
-
-    width: 100%;
-    background-color: white;
-
-    z-index: 1000;
-}
-
-.links{
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
-    padding: 15px 25px;
-
-    font-size: 17px;
-    font-family: silom;
-    color: var(--grey);
-
-    cursor: pointer;
-    z-index: 100;
-}
-.link{
-    margin-left: 25px;
-}
-
 .nav{
     position: fixed;
     left: 20px;
@@ -92,28 +61,28 @@ header{
     border-radius: 50px;
     background-color: #7070705b;
     color: rgba(255, 255, 255, 0);
-
-    transition: .2s;
 }
 .nav__dot:hover{
     color: white;
     width: 75px;
     height: 30px;
 }
+.hover-effect{
+    color: white;
+    width: 75px;
+    height: 30px;
+}
+.selected{
+    background-color: var(--grey);
+}
+
+
 .nav__bar{
     align-self: center;
     width: 2px;
     height: 20px;
     border-radius: 5px;
     background-color: #7070705b;
-}
-.selected{
-    background-color: var(--grey);
-}
-.hover-effect{
-    color: white;
-    width: 75px;
-    height: 30px;
 }
 
 .view{
@@ -146,6 +115,7 @@ header{
 .view__projects{
     flex-direction: row;
     justify-content: flex-start;
+    padding: 0 120px;
 }
 .view__projects--bumper{
     flex-shrink: 0;
@@ -185,10 +155,6 @@ header{
     width: 1000px;
     border-radius: 5px;
     box-shadow: -5px 5px 7px 0px rgba(0,0,0,0.3);
-    transform: translateX(100px);
-    transition: .3s;
-    transition-timing-function: ease-out;
-    opacity: 0;
 }
 
 .slide-in{
