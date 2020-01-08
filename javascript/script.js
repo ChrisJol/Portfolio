@@ -1,7 +1,7 @@
 let controller = new ScrollMagic.Controller()
 
 //project page tween and scroll scene
-let projectsImgTween = gsap.from('.projects__state--img', { x: 100, opacity: 0 })
+let projectsImgTween = gsap.from('.view__projects--img', { x: 100, opacity: 0 })
 let projectScene = new ScrollMagic.Scene({
     triggerElement: '.view__projects',
     duration: "50%"
@@ -29,9 +29,6 @@ navDots.forEach( dot => {
         console.log(event.target.hash)
     })
 })
-
-
-
 
 let animateDot = (selector) => {
     let selected = this.document.querySelector(".selected")

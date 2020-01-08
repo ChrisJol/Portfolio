@@ -5,6 +5,9 @@
 :root {
     --main-font: 'Arial Rounded MT Bold';
     --grey: #707070;
+    --light-grey: #7070705b;
+    --header-font: silom;
+    --body-font: "Sinhala Sangam MN";
 
 }
 
@@ -20,7 +23,7 @@
 body{
     padding: 0;
     margin: 0;
-    /* scroll-snap-type: y; */
+    background-color: #f6f6f6;
 }
 
 a{
@@ -59,7 +62,7 @@ a{
     text-align: center;
 
     border-radius: 50px;
-    background-color: #7070705b;
+    background-color: var(--light-grey);
     color: rgba(255, 255, 255, 0);
 }
 .nav__dot:hover{
@@ -76,25 +79,18 @@ a{
     background-color: var(--grey);
 }
 
-
 .nav__bar{
     align-self: center;
     width: 2px;
     height: 20px;
     border-radius: 5px;
-    background-color: #7070705b;
-}
-
-.view{
-    height: 100vh;
-    width: 100%;
+    background-color: var(--light-grey);
 }
 
 .view__splash,
 .view__projects,
 .view__skills,
 .view__contact{
-    scroll-snap-align: start;
     overflow: hidden;
 
     display: flex;
@@ -102,9 +98,8 @@ a{
     justify-content: center;
     align-items: center;
 
-    /* padding: 100px; */
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .view__splash--img{
@@ -113,46 +108,79 @@ a{
 }
 
 .view__projects{
-    flex-direction: row;
-    justify-content: flex-start;
+    align-items: flex-start;
     padding: 0 120px;
 }
-.view__projects--bumper{
-    flex-shrink: 0;
-    height: 100%;
-    width: 150px;
+
+.view__projects--container{
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 325px 1000px;
+    grid-gap: 75px;
 }
 
-.projects__state{
-    /* flex-shrink: 0; */
+.view__projects--info{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* max-width: 1500px; */
+    flex-direction: column;
+    justify-content: space-between;
 
-    margin: auto;
+    /* height: 100%; */
+    font-family: var(--body-font);
 }
 
-.projects__state--title{
-    font-family: silom;
+.view__projects--title{
+    font-family: var(--header-font);
     font-size: 50px;
     margin: 0;
     line-height: 1.2;
 }
-.projects__state--info{
-    flex-shrink: 0;
-    flex-grow: 0;
-    width: 325px;
-    margin-right: 75px;
-    font-family: "Sinhala Sangam MN";
-}
-.projects__state--info p {
+
+.view__projects--desc {
     color: var(--grey);
     line-height: 1.8;
     font-size: 17px;
 }
-.projects__state--img{
-    width: 1000px;
+
+.carousel{
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.carousel__button--left,
+.carousel__button--right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 15px;
+    padding: 10px 15px;
+
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: .1s;
+}
+.carousel__button--left:hover,
+.carousel__button--right:hover{
+    box-shadow: -7px 7px 7px rgba(0,0,0,0.15);
+    transform: translate( 2px, -2px);
+}
+
+.carousel__button--img,
+.carousel__button--img-right{
+    height: 20px;
+}
+.carousel__button--img-right{
+    transform: rotateY(180deg);
+}
+
+.view__projects--img{
+    width: 100%;
     border-radius: 5px;
     box-shadow: -5px 5px 7px 0px rgba(0,0,0,0.3);
 }
