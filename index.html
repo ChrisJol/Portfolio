@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Chris Jol</title>
+        <link href="https://fonts.googleapis.com/css?family=Signika|Manjari:700Muli|Nanum+Gothic:700|Nunito:700|Quicksand:600&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='stylesheets/style.css')>
     </head>
 
@@ -16,16 +17,43 @@
         <a class = "nav__dot contact" href = "#contact">Contact</a>
     </div>
 
+    <div class = "bloom">
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+        <div class = "pedal"></div>
+    </div>
+
     <div class = "view__splash" id = "splash">
-        <img class = "view__splash--img" src = "images/logo.png">
+        <!-- <img class = "view__splash--img" src = "images/logo.png"> -->
+        <div class="view__splash--header">
+            <div class="first-name">
+                <h1 class="view__splash--letter">C</h1>
+                <h1 class="view__splash--letter">H</h1>
+                <h1 class="view__splash--letter">R</h1>
+                <h1 class="view__splash--letter">I</h1>
+                <h1 class="view__splash--letter">S</h1>
+            </div>
+            <div class="last-name">
+                <h1 class="view__splash--letter">J</h1>
+                <h1 class="view__splash--letter">O</h1>
+                <h1 class="view__splash--letter">L</h1>
+            </div>
+        </div>
     </div>
 
     <div class = "view__projects" id = "projects">
         <div class = "view__projects--container">
             <div class = "view__projects--info">
-                <div>
+                <div class="view__projects--info-container">
                     <h1 class = "view__projects--title">State Exchange</h1>
-                    <p class="view__projects--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque felis pharetra arcu consequat commodo. Nulla facilisi. Nullam ut viverra turpis. Nam egestas enim mauris, in imperdiet risus aliquam eget. Aenean cursus congue nunc, ac scelerisque nunc sodales id. Nulla interdum pulvinar metus, eget euismod leo placerat nec. Phasellus nec mattis neque. Sed egestas fringilla libero, et ultricies eros egestas vitae. Aenean ac vulputate risus. Integer vehicula semper felis, at imperdiet purus. Fusce purus mauris, venenatis nec odio sed, blandit faucibus nisi.</p>
+                    <p class="view__projects--desc">State Exchange is the result of an international collaboration with students from Fulda University in Germany. The product is an e-commerce platform that allows students to exchange goods within a university environment. Students can make an account, upload items to sell, and contact other sellers through a simple messaging service</p>
+                    <p class="view__projects--tech">HTML/CSS, Javascript, Vue, MySQL, Node, Express</p>
+                    <div class="view__projects--button"><a class="view__projects--link" target="_blank">View live demo</a></div>
                 </div>
                 
                 <div class = "carousel">
@@ -49,6 +77,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="javascript/animate.js"></script>
     <script src="javascript/script.js"></script>
     <script src="javascript/carousel.js"></script>
 </html>

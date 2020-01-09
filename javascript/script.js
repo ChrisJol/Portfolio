@@ -1,5 +1,14 @@
 let controller = new ScrollMagic.Controller()
 
+let bloomTween = gsap.to(".bloom", {
+    rotation: -180
+})
+let bloomScene = new ScrollMagic.Scene({
+    triggerHook: .5,
+    duration: "100%"
+})
+.setTween(bloomTween)
+
 //project page tween and scroll scene
 let projectsImgTween = gsap.from('.view__projects--img', { x: 100, opacity: 0 })
 let projectScene = new ScrollMagic.Scene({
@@ -10,6 +19,7 @@ let projectScene = new ScrollMagic.Scene({
 // .addIndicators()
 
 controller.addScene([
+    bloomScene,
     projectScene
 ])
 
