@@ -3,15 +3,29 @@ let projects = [
         title : "State Exchange",
         description : "State Exchange is the result of an international collaboration with students from Fulda University in Germany. The product is an e-commerce platform that allows students to exchange goods within a university environment. Students can make an account, upload items to sell, and contact other sellers through a simple messaging service",
         img : "images/state.png",
-        tech: "HTML/CSS, Javascript, Vue, MySQL, Node, Express",
+        tech: "HTML, CSS, Javascript, Vue, MySQL, Node, Express",
         url : ""
     },
     {
         title : "Uno",
-        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque felis pharetra arcu consequat commodo. Nulla facilisi. Nullam ut viverra turpis. Nam egestas enim mauris, in imperdiet risus aliquam eget. Aenean cursus congue nunc, ac scelerisque nunc sodales id. Nulla interdum pulvinar metus, eget euismod leo placerat nec. Phasellus nec mattis neque. Sed egestas fringilla libero, et ultricies eros egestas vitae. Aenean ac vulputate risus. Integer vehicula semper felis, at imperdiet purus. Fusce purus mauris, venenatis nec odio sed, blandit faucibus nisi.",
+        description : "This card game application is the result of a 10 week, 4 student collaboration to build a real-time, multiplayer, online game that integrates front-end design and layout principles, back-end routing and serving of data, and a database to persist user data, game states, and to allow for live chat capabilities.",
         img: "images/uno.gif",
-        tech: "",
+        tech: "HTML, CSS, Javascript, Heroku, Node, Express, Postgres",
         url : "https://uno-667-02.herokuapp.com"
+    },
+    {
+        title: "Eating For Free",
+        description: "Eating For Free is a Bay Area based investigative podcast. The two hosts, Matthew Lawson and Joan Summers, contracted me to design and build their website to help grow their business",
+        img: "images/e4f.png",
+        tech: "HTML, CSS, Javascript",
+        url: "https://eatingforfree.com"
+    },
+    {
+        title: "Lawson Chriopractics",
+        description: "Lawson Chiropractics is a redesign of an out-dated website for a San Diego based chiropractor. The website was never deployed, but the design remains as a demonstration of modern design practices",
+        img: "images/lawson_chiro.png",
+        tech: "HTML, CSS, Javascript",
+        url: "https://chrisjol.github.io/Lawson-Chiro/"
     }
 ]
 
@@ -45,7 +59,7 @@ let preload = () => {
 preload()
 
 let animateOut = () => {
-    gsap.timeline({onComplete: updateData, defaults: {duration: .2}})
+    gsap.timeline({onComplete: updateData, defaults: {duration: .3}})
     .to('.view__projects--img', {
         x: 100,
         opacity: 0
@@ -62,7 +76,7 @@ let updateData = () => {
     projectImg.src = projects[currentIndex].img
     projectButton.href = projects[currentIndex].url
 
-    gsap.timeline({defaults: {duration: .2}})
+    gsap.timeline({defaults: {duration: .3}})
     .to('.view__projects--img', {
         x: 0,
         opacity: 1
