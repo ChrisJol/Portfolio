@@ -4,7 +4,7 @@ $.when(
     $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js"),
     $.getScript("https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"),
     $.getScript("https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"),
-    $.Deffered(function(deffered){
+    $.Deferred(function(deffered){
         $(deffered.resolve)
     }),
     $.getScript("javascript/script.js"),
