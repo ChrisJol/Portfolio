@@ -1,16 +1,32 @@
-$.when(
-    $.getScript("https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"),
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"),
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js"),
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"),
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"),
-    $.Deferred(function(deffered){
-        $(deffered.resolve)
-    }),
-    $.getScript("javascript/script.js"),
-    $.getScript("javascript/carousel.js"),
-)
-.done( function(){
+let loadScripts = (scripts) => {
+    var deffered = $.Deferred();
+
+    let loadScript = (i) => {
+        if ( i < scripts.length ){
+            $.getScript(scripts[i], () => {
+                loadScript( i + 1)
+            })
+        } else {
+            deffered.resolve()
+        }
+    }
+
+    loadScript(0)
+
+    return deffered
+}
+
+let scripts = [
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js",
+    "javascript/script.js",
+    "javascript/carousel.js"
+]
+
+loadScripts(scripts).done( () => {
     gsap.timeline({defaults: {duration: 4, delay: .1, ease: "power4.inOut"}})
     .from('.view__splash--letter', {
         opacity: 0,
