@@ -22,12 +22,14 @@ let scripts = [
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js",
+    // "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
     "javascript/script.js",
     "javascript/carousel.js"
 ]
 
-loadScripts(scripts).done( () => {
-    gsap.timeline({defaults: {duration: 4, delay: .1, ease: "power4.inOut"}})
+loadScripts(scripts)
+.done( () => {
+    gsap.timeline({defaults: {duration: 4, ease: "power4.inOut"}})
     .from('.view__splash--letter', {
         opacity: 0,
         y: "random(-100, 100)",
