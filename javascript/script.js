@@ -9,8 +9,19 @@ let projectScene = new ScrollMagic.Scene({
 .setTween(projectsTween)
 // .addIndicators()
 
+//skill page tween and scroll scene
+let skillsTween = gsap.timeline()
+    .from('.view__skills--header', { opacity: 0 }, 0)
+    .from('.view__skills--container', { y: 100, opacity: 0, stagger: .2}, 0)
+let skillScene = new ScrollMagic.Scene({
+    triggerElement: '.view__skills',
+    duration: "50%"
+})
+.setTween(skillsTween)
+
 controller.addScene([
-    projectScene
+    projectScene,
+    skillScene
 ])
 
 let navDots = document.querySelectorAll(".nav__dot")
