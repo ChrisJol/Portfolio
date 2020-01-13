@@ -24,8 +24,8 @@ let scripts = [
     "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js",
     // "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
-    // "javascript/script.js",
-    // "javascript/carousel.js"
+    "javascript/script.js",
+    "javascript/carousel.js"
 ]
 
 loadScripts(scripts)
