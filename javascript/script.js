@@ -1,12 +1,12 @@
 let controller = new ScrollMagic.Controller()
 
 //project page tween and scroll scene
-let projectsImgTween = gsap.from('.view__projects--img', { x: 100, opacity: 0 })
+let projectsTween = gsap.from('.view__projects--img', { x: 100, opacity: 0})
 let projectScene = new ScrollMagic.Scene({
     triggerElement: '.view__projects',
     duration: "50%"
 })
-.setTween(projectsImgTween)
+.setTween(projectsTween)
 // .addIndicators()
 
 controller.addScene([
@@ -25,8 +25,6 @@ navDots.forEach( dot => {
             scrollTo: location,
             ease: "expo.out"
         })
-
-        console.log(event.target.hash)
     })
 })
 
