@@ -44,7 +44,7 @@ let animateDot = (selector) => {
     }, 1000 )
 }
 
-window.addEventListener("scroll", function(){
+let setScrollPosition = () => {
     let skills = document.querySelector(".view__skills").offsetTop
     let contact = document.querySelector(".view__contact").offsetTop
     let projects = document.querySelector(".view__projects").offsetTop
@@ -62,16 +62,12 @@ window.addEventListener("scroll", function(){
     else{
         animateDot(".splash")
     }
+}
+
+setScrollPosition()
+
+window.addEventListener("scroll", function(){
+    setScrollPosition()
 })
-
-
-
-// let navDots = document.querySelectorAll(".nav__dot")
-// navDots.forEach(dot => {
-//     dot.classList.add("hover-effect")
-//     setTimeout(_ => {
-//         dot.classList.remove("hover-effect")
-//     }, timeout)
-// })
 
 
