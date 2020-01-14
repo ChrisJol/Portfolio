@@ -41,18 +41,21 @@ navDots.forEach( dot => {
 
 let animateDot = (selector) => {
     let selected = this.document.querySelector(".selected")
+    let currentDot = document.querySelector(selector)
 
-    selected.classList.remove("hover-effect")
-    selected.classList.remove("selected")
+    if(currentDot !== selected){
+        if(selected !== null){
+            selected.classList.remove("hover-effect")
+            selected.classList.remove("selected")
+        }
 
-    let dot = document.querySelector(selector)
+        currentDot.classList.add("selected")
+        currentDot.classList.add("hover-effect")
 
-    dot.classList.add("selected")
-    dot.classList.add("hover-effect")
-
-    setTimeout( function(){
-        dot.classList.remove("hover-effect")
-    }, 3000 )
+        setTimeout( function(){
+            currentDot.classList.remove("hover-effect")
+        }, 3000 )
+    }
 }
 
 let setScrollPosition = () => {
