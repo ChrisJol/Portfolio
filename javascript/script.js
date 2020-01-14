@@ -52,7 +52,7 @@ let animateDot = (selector) => {
 
     setTimeout( function(){
         dot.classList.remove("hover-effect")
-    }, 1000 )
+    }, 3000 )
 }
 
 let setScrollPosition = () => {
