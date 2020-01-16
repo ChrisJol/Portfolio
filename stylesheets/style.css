@@ -6,6 +6,7 @@
     --bg-color: #f6f6f6;
 
     --primary-color: #fdca52;
+    --dark-primary: #ffb710;
     --grey: #707070;
     --light-grey: #7070705b;
 
@@ -29,6 +30,10 @@ a{
 
 h1 {
     font-family: var(--header-font);
+}
+
+.link{
+    color: var(--dark-primary);
 }
 
 .nav{
@@ -161,6 +166,65 @@ h1 {
 }
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONTACT */
+.view__contact{
+    height: auto;
+    min-height: 300px;
+}
+
+.view__contact--container{
+    max-width: 600px;
+    text-align: center;
+}
+
+.view__contact--name{
+    margin: 0;
+    font-size: 50px;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.view__contact--details{
+    display: inline;
+    font-family: var(--body-font);
+    margin: 0;
+    color: var(--grey);
+}
+
+.view__contact--desc{
+    font-family: var(--body-font);
+    color: var(--grey);
+    margin: 5px;
+}
+
+.view__contact--links{
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-gap: 10px;
+
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.view__contact--link{
+    font-family: var(--header-font);
+    color: white;
+
+    padding: 5px 10px;
+    margin: 0;
+
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+.view__contact--form{
+    background-color: white;
+    box-shadow: -5px 5px 7px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS */
 .view__projects{
     align-items: flex-start;
@@ -186,6 +250,7 @@ h1 {
 .view__projects--title{
     font-family: var(--header-font);
     font-size: 50px;
+
     margin: 0;
     line-height: 1;
 }
@@ -346,49 +411,4 @@ h1 {
 
 .view__skills-skill{
     margin: 0 0 10px 0;
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONTACT */
-.view__contact--container{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-gap: 20px;
-    width: 1090px;
-}
-
-.view__contact--name{
-    margin: 0;
-    font-size: 50px;
-    line-height: 1;
-}
-
-.view__contact--links{
-    display: grid;
-    grid-template-columns: repeat(3, min-content);
-    grid-gap: 10px;
-}
-
-.view__contact--link{
-    font-family: var(--header-font);
-    color: white;
-
-    padding: 5px 10px;
-    margin: 0;
-
-    background-color: var(--primary-color);
-    border-radius: 50px;
-}
-
-.view__contact--desc{
-    font-family: var(--body-font);
-    color: var(--grey);
-    /* margin: 0; */
-}
-
-.view__contact--form{
-    background-color: white;
-    box-shadow: -5px 5px 7px 0px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 50px;
 }
