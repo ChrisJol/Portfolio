@@ -1,8 +1,8 @@
 let controller = new ScrollMagic.Controller()
 
 let aboutTween = gsap.timeline()
-    .from('.view__contact--name', {opacity: 0})
-    .from('.view__contact--container', {opacity: 0})
+    .from('.view__contact--name', {opacity: 0}, 0)
+    .from('.view__contact--container', {opacity: 0}, 1)
 let aboutScene = new ScrollMagic.Scene({
     triggerElement: '.view__contact',
     duration: "15%"
