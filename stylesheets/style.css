@@ -37,8 +37,6 @@ h1 {
     background-color: var(--primary-color);
     padding: 3px 10px;
     border-radius: 50px;
-    /* text-decoration-line: underline; */
-    /* text-decoration-color: var(--grey); */
 }
 
 .nav{
@@ -144,11 +142,6 @@ h1 {
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SPLASH */
-.view__splash--img{
-    width: 600px;
-    margin: -120px -140px 0 0;
-}
-
 .view__splash--header{
     display: flex;
     flex-direction: column;
@@ -284,7 +277,6 @@ h1 {
 
     cursor: pointer;
     transition: .2s;
-    /* box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.2); */
 }
 .view__projects--button:hover{
     box-shadow: -7px 7px 7px rgba(0,0,0,0.15);
@@ -343,7 +335,7 @@ h1 {
 .view__skills{
     display: grid;
     grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(2, min-content);
     grid-template-areas:
         "header header header"
         ". . ."

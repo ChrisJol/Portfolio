@@ -1,0 +1,145 @@
+@media only screen and (min-width: 2100px) and (min-height: 1815px) {
+    .link{
+        padding: 7px 20px;
+    }
+
+    .nav{
+        max-width: 35px;
+        left: 40px;
+    }
+    .nav__dot{
+        width: 35px;
+        height: 35px;
+        font-size: 30px;
+        margin: 27px 0;
+    }
+    .nav__dot:hover{
+        width: 140px;
+        height: 55px;
+    }
+    .hover-effect{
+        width: 140px;
+        height: 55px;
+    }
+
+
+    .nav__bar{
+        height: 45px;
+        width: 4px;
+    }
+
+    .pedal{
+        width: 400px;
+        height: 400px;
+    }
+
+    .view__splash--letter{
+        margin: 0 30px;
+        font-size: 260px;
+    }
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONTACT */
+    .view__contact{
+        min-height: 500px;
+    }
+    .view__contact--container{
+        max-width: 1250px;
+    }
+    .view__contact--name{
+        font-size: 105px;
+    }
+    .view__contact--desc{
+        font-size: 32px;
+    }
+    .view__contact--rel{
+        font-size: 32px;
+        margin-top: 25px;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS */
+    .view__projects{
+        padding: 0 230px;
+    }
+    .view__projects--container{
+        grid-template-columns: 620px 2000px;
+        grid-gap: 135px;
+    }
+    .view__projects--title{
+        font-size: 100px;
+    }
+    .view__projects--desc{
+        font-size: 32px;
+    }
+    .view__projects--tech{
+        font-size: 26px;
+    }
+    .view__projects--button{
+        margin: 40px 0;
+        padding: 14px 40px;
+        border-radius: 8px;
+    }
+    .view__projects--button:hover{
+        box-shadow: -8px 8px 8px rgba(0,0,0,0.15);
+        transform: translate( 3px, -3px);
+    }
+    .view__projects--link{
+        font-size: 35px;
+    }
+    .carousel__button--left,
+    .carousel__button--right{
+        margin-right: 30px;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: -8px 8px 8px 0px rgba(0,0,0,0.2);
+    }
+    .carousel__button--left:hover,
+    .carousel__button--right:hover{
+        box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+        transform: translate( 3px, -3px);
+    }
+    .carousel__button--img,
+    .carousel__button--img-right{
+        height: 40px;
+    }
+    .view__projects--img{
+        border-radius: 10px;
+        box-shadow: -10px 10px 15px 0px rgba(0,0,0,0.3);
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SKILLS */
+    .view__skills{
+        grid-template-columns: repeat(3, 700px);
+        grid-gap: 50px 40px;
+        margin-top: -200px;
+    }
+    .view__skills--header{
+        font-size: 120px;
+    }
+    .view__skills--container{
+        box-shadow: -8px 8px 10px 0px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        padding: 110px;
+    }
+    .view__skills--head{
+        grid-template-rows: min-content 120px 300px;
+    }
+    .view__skills--icon{
+        height: 55px;
+    }
+    .view__skills--title{
+        font-size: 50px;
+    }
+    .view__skills--desc{
+        font-size: 32px;
+    }
+    .view__skills--content{
+        font-size: 32px;
+    }
+    .skills__content--header{
+        font-size: 40px;
+    }
+    .view__skills-skill{
+        margin: 0 0 20px 0;
+    }
+  }
