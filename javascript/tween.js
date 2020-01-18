@@ -1,15 +1,16 @@
 let controller = new ScrollMagic.Controller()
 
+//ABOUT page tween and scroll scene
 let aboutTween = gsap.timeline()
     .from('.view__contact--name', {opacity: 0}, 0)
     .from('.view__contact--container', {opacity: 0}, 1)
 let aboutScene = new ScrollMagic.Scene({
     triggerElement: '.view__contact',
-    duration: "15%"
+    duration: "150px"
 })
 .setTween(aboutTween)
 
-//project page tween and scroll scene
+//PROJECTS page tween and scroll scene
 let projectsTween = gsap.timeline()
     .from('.view__projects--img', { x: 100, opacity: 0}, 0)
     .from('.view__projects--info', {x: -100, opacity: 0}, 0)
@@ -19,7 +20,7 @@ let projectScene = new ScrollMagic.Scene({
 })
 .setTween(projectsTween)
 
-//skill page tween and scroll scene
+//SKILLS page tween and scroll scene
 let skillsTween = gsap.timeline()
     .from('.view__skills--header', { opacity: 0 }, 0)
     .from('.view__skills--container', { y: 100, opacity: 0, stagger: .2}, 0)

@@ -33,7 +33,12 @@ h1 {
 }
 
 .link{
-    color: var(--dark-primary);
+    color: white;
+    background-color: var(--primary-color);
+    padding: 3px 10px;
+    border-radius: 50px;
+    /* text-decoration-line: underline; */
+    /* text-decoration-color: var(--grey); */
 }
 
 .nav{
@@ -173,7 +178,7 @@ h1 {
 }
 
 .view__contact--container{
-    max-width: 600px;
+    max-width: 620px;
     text-align: center;
 }
 
@@ -195,6 +200,14 @@ h1 {
     font-family: var(--body-font);
     color: var(--grey);
     margin: 5px;
+    line-height: 1.8;
+}
+
+.view__contact--rel{
+    font-family: var(--body-font);
+    color: var(--grey);
+    margin-top: 20px;
+    line-height: 1.8;
 }
 
 .view__contact--links{
@@ -202,7 +215,7 @@ h1 {
     grid-template-columns: repeat(3, min-content);
     grid-gap: 10px;
 
-    margin: 10px 0;
+    margin: 10px 0 30px 0;
     justify-content: center;
 }
 
@@ -215,13 +228,6 @@ h1 {
 
     background-color: var(--primary-color);
     border-radius: 50px;
-}
-
-.view__contact--form{
-    background-color: white;
-    box-shadow: -5px 5px 7px 0px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 50px;
 }
 
 

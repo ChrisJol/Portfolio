@@ -1,8 +1,4 @@
 let navDots = document.querySelectorAll(".nav__dot")
-let skills = document.querySelector(".view__skills").offsetTop
-let contact = document.querySelector(".view__contact").offsetTop
-let projects = document.querySelector(".view__projects").offsetTop
-let pageYOffset = 0
 
 navDots.forEach( dot => {
     dot.addEventListener("click", function(event){
@@ -50,7 +46,10 @@ function animateDot(selector) {
 }
 
 function setScrollPosition(){
-    pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
+    let skills = document.querySelector(".view__skills").offsetTop
+    let contact = document.querySelector(".view__contact").offsetTop
+    let projects = document.querySelector(".view__projects").offsetTop
+    let pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
 
     if(pageYOffset >= contact && pageYOffset < projects){
         animateDot(".contact")

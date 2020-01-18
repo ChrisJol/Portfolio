@@ -54,10 +54,4 @@ loadScripts(scripts)
         }
     }, 0)
     .add(bloom(), 0)
-    // .to(window, {
-    //     duration: 2,
-    //     scrollTo: { y: '#contact', offsetY: offset},
-    //     ease: "expo.inOut",
-    //     delay: 4
-    // }, 1)
 })
