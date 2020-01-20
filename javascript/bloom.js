@@ -16,6 +16,12 @@ let loadScripts = (scripts) => {
     return deffered
 }
 
+let setVh = () => {
+    let vh = window.innerHeight
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+}
+
+
 let scripts = [
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js",
@@ -27,6 +33,7 @@ let scripts = [
     "javascript/carousel.js"
 ]
 
+setVh()
 loadScripts(scripts)
 .done( () => {
 

@@ -32,6 +32,10 @@ h1 {
     font-family: var(--header-font);
 }
 
+.mobile__disclaimer{
+    display: none;
+}
+
 .link{
     color: white;
     background-color: var(--primary-color);
