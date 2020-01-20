@@ -14,17 +14,20 @@ navDots.forEach( dot => {
     })
 })
 
-document.querySelector(".link").addEventListener('click', (event => {
-    event.preventDefault()
-        let location = `${event.target.hash}`
-        let offset = ( window.innerHeight - $(location).height() ) / 2
+let links = document.querySelectorAll(".link")
+links.forEach( link =>
+    link.addEventListener('click', (event => {
+        event.preventDefault()
+            let location = `${event.target.hash}`
+            let offset = ( window.innerHeight - $(location).height() ) / 2
 
-        gsap.to(window, {
-            duration: 1.3,
-            scrollTo: { y: location, offsetY: offset},
-            ease: "expo.out"
-        })
-}))
+            gsap.to(window, {
+                duration: 1.3,
+                scrollTo: { y: location, offsetY: offset},
+                ease: "expo.out"
+            })
+    }))
+)
 
 function animateDot(selector) {
     let selected = document.querySelector(".selected")

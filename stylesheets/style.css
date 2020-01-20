@@ -13,6 +13,8 @@
     --header-font: 'Quicksand', sans-serif;
     --body-font: "Sinhala Sangam MN";
 
+    --vh: 100vh;
+
 }
 
 body{
@@ -37,6 +39,10 @@ h1 {
     background-color: var(--primary-color);
     padding: 3px 10px;
     border-radius: 50px;
+}
+
+.link--abt{
+    display: none;
 }
 
 .nav{
@@ -105,14 +111,15 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     animation: spin 24s linear infinite;
+    z-index: 0;
 }
 
 .pedal{
@@ -149,9 +156,11 @@ h1 {
     align-items: center;
 }
 
-.first-name,
-.last-name{
+.header--max{
     display: flex;
+}
+.header--min{
+    display: none;
 }
 
 .view__splash--letter{
