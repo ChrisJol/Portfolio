@@ -4,7 +4,7 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
     .link--abt{
         display: block;
@@ -14,23 +14,33 @@
     }
 
     .bloom{
-        /* position: static; */
         width: 50px;
         height: 50px;
         top: calc(50% - 25px);
+        z-index: 0;
     }
     .pedal{
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 300px;
+        opacity: .5;
+        transform: scale(1, 1);
     }
+    .one{ transform: translate(-50%, 0);}
+    .two{ transform: translate(-35%, -35%);}
+    .three{ transform: translate(0, -50%);}
+    .four{ transform: translate(35%, -35%);}
+    .five{ transform: translate(50%, 0);}
+    .six{ transform: translate(35%, 35%);}
+    .seven{ transform: translate(0, 50%);}
+    .eight{ transform: translate(-35%, 35%);}
 
     .view__splash,
     .view__projects,
     .view__skills,
     .view__contact{
         padding: 15px;
-        height: var(--vh, 100vh);
-        min-height: 0;
+        height: auto;
+        min-height: var(--vh, 100vh);
     }
 
 
@@ -41,7 +51,6 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        /* background-color: var(--primary-color); */
     }
     .view__splash--header{
         align-items: flex-start;
@@ -49,7 +58,8 @@
     .view__splash--letter{
         margin: 0;
         font-size: 70px;
-        /* color: var(--primary-color); */
+        opacity: 1;
+        z-index: 100;
     }
 
 
@@ -59,6 +69,54 @@
     }
     .view__contact--container{
         text-align: left;
+    }
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS */
+    .view__projects--container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+            "img"
+            "content"
+        ;
+        align-items: center;
+        grid-gap: 10px;
+    }
+    .view__projects--info{
+        grid-area: content;
+    }
+    .view__projects--img{
+        grid-area: img;
+    }
+    .view__projects--info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: 
+            "buttons"
+            "content"
+        ;
+    }
+    .view__projects--desc{
+        grid-area: content;
+    }
+    .view__projects--button:hover{
+        box-shadow: none;
+    }
+    .carousel{
+        align-self: start;
+        grid-area: buttons;
+        justify-content: flex-end;
+    }
+    .carousel__button--left,
+    .carousel__button--right{
+        box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.1);
+    }
+    .carousel__button--left:hover,
+    .carousel__button--right:hover{
+        box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.1);
+        transform: translate(0, 0)
     }
 
 }

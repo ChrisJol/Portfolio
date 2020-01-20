@@ -135,7 +135,7 @@ h1 {
 .view__projects,
 .view__skills,
 .view__contact{
-    overflow: hidden;
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column;

@@ -1,3 +1,5 @@
+let mobile = false;
+
 let loadScripts = (scripts) => {
     var deffered = $.Deferred();
 
@@ -21,6 +23,18 @@ let setVh = () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`)
 }
 
+let checkMobile = (observer) => {
+    if(observer.matches){
+        mobile = true
+        console.log("matched true")
+        // window.location.assign("https://google.com")
+    }
+    else{
+        mobile = false
+        console.log("matched false")
+    }
+}
+
 let scripts = [
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/ScrollToPlugin.min.js",
@@ -32,33 +46,39 @@ let scripts = [
     "javascript/carousel.js"
 ]
 
+let mediaObserver = window.matchMedia("(max-width: 600px)")
+mediaObserver.addListener(checkMobile)
+
+checkMobile(mediaObserver)
 setVh()
 loadScripts(scripts)
 .done( () => {
 
-    let offset = ( window.innerHeight - $('#contact').height() ) / 2
+    if(!mobile){
+        let offset = ( window.innerHeight - $('#contact').height() ) / 2
 
-    let bloom = () => {
-        gsap.timeline({ defaults: {opacity: .5, scale: 2, duration: 4, ease: "power4.inOut"}})
-            .to('.one', { xPercent: -100 }, 0)
-            .to('.two', { xPercent: -70, yPercent: -70 }, 0)
-            .to('.three', { yPercent: -100 }, 0)
-            .to('.four', { xPercent: 70, yPercent: -70 }, 0)
-            .to('.five', { xPercent: 100 }, 0)
-            .to('.six', { xPercent: 70, yPercent: 70 }, 0)
-            .to('.seven', { yPercent: 100 }, 0)
-            .to('.eight', { xPercent: -70, yPercent: 70 }, 0)
-    }
-
-    gsap.timeline({defaults: {duration: 4, ease: "power4.inOut"}})
-    .from('.view__splash--letter', {
-        opacity: 0,
-        y: "random(-100, 100)",
-        stagger: {
-            amount: 1,
-            from: "center"
+        let bloom = () => {
+            gsap.timeline({ defaults: {opacity: .5, scale: 2, duration: 4, ease: "power4.inOut"}})
+                .to('.one', { xPercent: -100 }, 0)
+                .to('.two', { xPercent: -70, yPercent: -70 }, 0)
+                .to('.three', { yPercent: -100 }, 0)
+                .to('.four', { xPercent: 70, yPercent: -70 }, 0)
+                .to('.five', { xPercent: 100 }, 0)
+                .to('.six', { xPercent: 70, yPercent: 70 }, 0)
+                .to('.seven', { yPercent: 100 }, 0)
+                .to('.eight', { xPercent: -70, yPercent: 70 }, 0)
         }
-    }, 0)
-    .add(bloom(), 0)
-    .from('.link--abt', { x: 100, opacity: 0, duration: 1, delay: 4}, 0)
+
+        gsap.timeline({defaults: {duration: 4, ease: "power4.inOut"}})
+        .from('.view__splash--letter', {
+            opacity: 0,
+            y: "random(-100, 100)",
+            stagger: {
+                amount: 1,
+                from: "center"
+            }
+        }, 0)
+        .add(bloom(), 0)
+        .from('.link--abt', { x: 100, opacity: 0, duration: 1, delay: 4}, 0)
+    }
 })

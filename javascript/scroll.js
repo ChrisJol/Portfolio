@@ -1,7 +1,9 @@
 let navDots = document.querySelectorAll(".nav__dot")
+let links = document.querySelectorAll(".link")
+let skills, contact, projects, pageYOffset;
 
-navDots.forEach( dot => {
-    dot.addEventListener("click", function(event){
+let addScrollListener = (element) => {
+    element.addEventListener("click", function(event){
         event.preventDefault()
         let location = `${event.target.hash}`
         let offset = ( window.innerHeight - $(location).height() ) / 2
@@ -12,24 +14,9 @@ navDots.forEach( dot => {
             ease: "expo.out"
         })
     })
-})
+}
 
-let links = document.querySelectorAll(".link")
-links.forEach( link =>
-    link.addEventListener('click', (event => {
-        event.preventDefault()
-            let location = `${event.target.hash}`
-            let offset = ( window.innerHeight - $(location).height() ) / 2
-
-            gsap.to(window, {
-                duration: 1.3,
-                scrollTo: { y: location, offsetY: offset},
-                ease: "expo.out"
-            })
-    }))
-)
-
-function animateDot(selector) {
+let animateDot = (selector) => {
     let selected = document.querySelector(".selected")
     let currentDot = document.querySelector(selector)
 
@@ -48,11 +35,11 @@ function animateDot(selector) {
     }
 }
 
-function setScrollPosition(){
-    let skills = document.querySelector(".view__skills").offsetTop
-    let contact = document.querySelector(".view__contact").offsetTop
-    let projects = document.querySelector(".view__projects").offsetTop
-    let pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
+let setScrollPosition = () => {
+    skills = document.querySelector(".view__skills").offsetTop
+    contact = document.querySelector(".view__contact").offsetTop
+    projects = document.querySelector(".view__projects").offsetTop
+    pageYOffset = this.window.pageYOffset + (this.window.innerHeight / 2)
 
     if(pageYOffset >= contact && pageYOffset < projects){
         animateDot(".contact")
@@ -69,7 +56,6 @@ function setScrollPosition(){
 }
 
 setScrollPosition()
-
-window.addEventListener("scroll", function(){
-    setScrollPosition()
-})
+navDots.forEach( dot => { addScrollListener(dot) })
+links.forEach( link => addScrollListener(link) )
+window.addEventListener("scroll", () => { setScrollPosition() })
