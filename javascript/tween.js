@@ -1,6 +1,3 @@
-import { gsap } from "gsap";
-import ScrollMagic from 'scrollmagic'
-
 let controller = new ScrollMagic.Controller()
 
 //ABOUT page tween and scroll scene
@@ -38,6 +35,5 @@ controller.addScene([
     projectScene,
     skillScene
 ])
-
 
 

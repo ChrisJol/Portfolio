@@ -15,12 +15,6 @@
 
 }
 
-@font-face{
-    font-family: 'Quicksand';
-    src: url(../public/fonts/quicksand.ttf);
-    font-weight: 600;
-}
-
 body{
     padding: 0;
     margin: 0;
