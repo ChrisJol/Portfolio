@@ -1,5 +1,3 @@
-import { gsap } from 'gsap'
-
 $.getJSON("json/projects.json").done( (projects) => {
     let currentIndex = 0;
 
