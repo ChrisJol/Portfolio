@@ -4,7 +4,7 @@
         "description" : "State Exchange is the result of an international collaboration with students from Fulda University in Germany. The product is an e-commerce platform that allows students to exchange goods within a university environment. Students can make an account, upload items to sell, and contact other sellers through a simple messaging service",
         "img" : "public/images/state.png",
         "tech": "HTML, CSS, Javascript, Vue, MySQL, Node, Express",
-        "url" : ""
+        "url" : "https://github.com/ChrisJol/State-Exchange"
     },
     {
         "title" : "Uno",
