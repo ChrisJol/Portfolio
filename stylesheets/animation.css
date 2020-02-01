@@ -1,0 +1,29 @@
+@keyframes spin {
+    from {transform: rotate(0);}
+    to {transform: rotate(-360deg);}
+}
+
+@keyframes bloom1 {
+    to { transform: translate(-100%, 0) scale(2); opacity: .5 };
+}
+@keyframes bloom2 {
+    to { transform: translate(-70%, -70%) scale(2); opacity: .5 };
+}
+@keyframes bloom3 {
+    to { transform: translate(0, -100%) scale(2); opacity: .5 };
+}
+@keyframes bloom4 {
+    to { transform: translate(70%, -70%) scale(2); opacity: .5 };
+}
+@keyframes bloom5 {
+    to { transform: translate(100%, 0) scale(2); opacity: .5 };
+}
+@keyframes bloom6 {
+    to { transform: translate(70%, 70%) scale(2); opacity: .5 };
+}
+@keyframes bloom7 {
+    to { transform: translate(0, 100%) scale(2); opacity: .5 };
+}
+@keyframes bloom8 {
+    to { transform: translate(-70%, 70%) scale(2); opacity: .5 };
+}

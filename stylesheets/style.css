@@ -13,6 +13,9 @@
     --header-font: 'Quicksand', sans-serif;
     --body-font: "Sinhala Sangam MN";
 
+    --an-dur: 2s;
+    --an-func: cubic-bezier(.75, 0, .25, 1);
+
 }
 
 body{
@@ -100,11 +103,6 @@ h1 {
     background-color: var(--light-grey);
 }
 
-@keyframes spin {
-    from {transform: rotate(0);}
-    to {transform: rotate(-360deg);}
-}
-
 .bloom {
     position: absolute;
     top: 0;
@@ -126,6 +124,32 @@ h1 {
     background-color: var(--primary-color);
     border-radius: 50%;
     opacity: 0;
+}
+
+
+.one{
+    animation: bloom1 var(--an-dur) var(--an-func) forwards;
+}
+.two{
+    animation: bloom2 var(--an-dur) var(--an-func) forwards;
+}
+.three{
+    animation: bloom3 var(--an-dur) var(--an-func) forwards;
+}
+.four{
+    animation: bloom4 var(--an-dur) var(--an-func) forwards;
+}
+.five{
+    animation: bloom5 var(--an-dur) var(--an-func) forwards;
+}
+.six{
+    animation: bloom6 var(--an-dur) var(--an-func) forwards;
+}
+.seven{
+    animation: bloom7 var(--an-dur) var(--an-func) forwards;
+}
+.eight{
+    animation: bloom8 var(--an-dur) var(--an-func) forwards;
 }
 
 .view__splash,
