@@ -56,6 +56,11 @@
         font-size: 32px;
         margin-top: 25px;
     }
+    .view__contact--link{
+        font-size: 30px;
+        padding: 8px 25px;
+        margin: 15px 0;
+    }
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS */
     .view__projects{

@@ -243,6 +243,7 @@ h1 {
 .view__contact--link{
     font-family: var(--header-font);
     color: white;
+    font-size: 14px;
 
     padding: 5px 10px;
     margin: 0;
