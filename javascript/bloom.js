@@ -34,6 +34,8 @@ let scripts = [
 ]
 
 setVh()
+window.addEventListener('resize', setVh)
+
 loadScripts(scripts)
 .done( () => {
     gsap.from('.view__splash--letter', {
