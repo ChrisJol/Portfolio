@@ -196,6 +196,7 @@ h1 {
 .view__contact{
     height: auto;
     min-height: 300px;
+    z-index: 10000;
 }
 
 .view__contact--container{
