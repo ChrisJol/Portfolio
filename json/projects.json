@@ -1,5 +1,12 @@
 [
     {
+        "title" : "Swivel",
+        "description" : "This is a website that I build for a client who was starting her business as a virtual assistant. The design is a pixel perfect layout with all media edited and sized to fit every screen width. I had to work very closely with the client to understands her needs for the business in order to properly complete the site.",
+        "img" : "public/images/swivel.jpg",
+        "tech" : "HTML, CSS, Javascript",
+        "url" : "https://swivelgal.com"
+    },
+    {
         "title" : "State Exchange",
         "description" : "State Exchange is the result of an international collaboration with students from Fulda University in Germany. The product is an e-commerce platform that allows students to exchange goods within a university environment. Students can make an account, upload items to sell, and contact other sellers through a simple messaging service",
         "img" : "public/images/state.png",
