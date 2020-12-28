@@ -139,14 +139,6 @@ $.getJSON("json/projects.json").done( (projects) => {
         animateOut()
     })
 
-    let preload = () => {
-        projects.map( ({ img }) => {
-            let image = new Image()
-            image.src = img
-        })
-    }
-    preload()
-
     let animateOut = () => {
         gsap.timeline({onComplete: updateData, defaults: {duration: .3}})
         .to('.view__projects--img', {
