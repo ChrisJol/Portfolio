@@ -115,6 +115,7 @@ h1 {
     align-items: center;
 
     animation: spin 24s linear infinite;
+    pointer-events: none;
 }
 
 .pedal{
