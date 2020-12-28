@@ -18,6 +18,23 @@
 
 }
 
+body::after{
+    content: 
+        url(../public/images/e4f.png)
+        url(../public/images/lawson_chiro.png)
+        url(../public/images/state.png)
+        url(../public/images/swivel.jpg)
+        url(../public/images/uno.gif)
+    ;
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    overflow: hidden;
+    z-index: -1;
+ }
+
 body{
     padding: 0;
     margin: 0;
